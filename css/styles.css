@@ -7,11 +7,12 @@
 .background-lpurple {
     background-image: url("../images/fabric-light.png");
     background-color: #736679;
+    width: 100%;
     padding: 45px;
     z-index: -25;
 }
 .gradient-radial-header {
-    background: radial-gradient(circle , #827487 1%, transparent 50%);
+    background: radial-gradient(circle , #827487 1%, transparent 45%);
     position: absolute;
     z-index: -50;
     height: 100%;
@@ -119,4 +120,123 @@
 @font-face {
     font-family: Lato;
     src: url("../fonts/Lato.ttf");
+}
+@media (max-width: 768px) {
+    .navpadding {
+        padding-left: 10px;
+    }
+
+    .stakx-logo {
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        left: 0;
+    }
+    .navbar-imitation {
+        display: inline-block;
+        margin-left: -2em;
+        font-size: 12px;
+    }
+    .white-border {
+        margin-left: 40px;
+        width: 320px;
+    }
+    .background-char {
+        margin-left: 40px;
+        width: 320px;
+        height: 240px;
+    }
+}
+@media (device-width: 320px) {
+    .white-border {
+        margin-left: 27px;
+        width: 270px;
+    }
+    .background-char {
+        margin-left: 27px;
+        width: 270px;
+    }
+    .twig-img {
+        margin-left: 55px;
+    }
+    .info-header{
+        text-align: center;
+    }
+    .navbar-imitation {
+        margin-left: 1px;
+    }
+}
+@media (device-width: 360px) {
+    .white-border {
+        margin-left: 27px;
+        width: 308px;
+    }
+    .background-char {
+        margin-left: 27px;
+        width: 308px;
+    }
+    .twig-img {
+        margin-left: 60px;
+        padding-bottom: 30px;
+    }
+    .info-header {
+        text-align: center;
+    }
+    .navpadding {
+        padding-left: 6px;
+    }
+    .navbar-imitation {
+        margin-left: 1px;
+    }
+    .lgslogan {
+        font-size: 35px;
+    }
+}
+@media (device-width: 411px) {
+    .white-border {
+        width: 330px;
+    }
+    .background-char {
+        width: 330px;
+    }
+    .twig-img {
+        margin-left: 90px;
+        padding-bottom: 30px;
+    }
+    .info-header {
+        text-align: center;
+    }
+    .navbar-imitation {
+        margin-left: 1px;
+    }
+}
+@media (device-width: 435px) {
+    .white-border {
+        width: 350px;
+    }
+    .background-char {
+        width: 350px;
+    }
+    .lgslogan {
+        font-size: 35px;
+    }
+    .twig-img {
+        margin-left: 110px;
+        padding-bottom: 30px;
+    }
+    .info-header {
+        text-align: center;
+    }
+}
+@media (device-width: 375px) {
+    .navpadding {
+        padding-left: 9px;
+    }
+}
+
+@media (max-width: 321px) {
+    .navpadding {
+        font-size: 10px;
+        padding-left: 7px;
+    }
 }
