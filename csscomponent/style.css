@@ -1,0 +1,283 @@
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: white;
+	padding: 20px;
+	padding-left: 35px;
+}
+
+.container__home__1 {
+	margin-top: 3.5em;
+	width: 60em;
+	height: 45em;
+	background-image: url("../Images/fabric-light.png");
+}
+
+.container__home__2 {
+	margin-top: 2em;
+	margin-bottom: 10em;
+	width: 60em;
+	height: 43.5em;
+	background-image: url("../Images/fabric-light.png");
+}
+
+.container__home__3 {
+	width: 54em;
+	height: 50em;
+	background-image: url("../Images/fabric-light.png");
+	margin-top: 3.5em;
+	margin-left: 8.2em;
+}
+
+.background-dpurple {
+   background-image: url("../Images/fabric-dark.png");
+   height: 100%;
+   z-index: -100;
+   background-color: #3c2d41;
+}
+
+.why {
+	font-size: 36px;
+}
+
+.understand {
+	font-size: 34px;
+}
+
+.navbar-imitation {
+	margin-left: 22.5em;
+	margin-top: 1.5em;
+	font-size: 14px;
+	word-spacing: 3px;
+}
+
+.navbar-imitation > a {
+	color: #D6BEDE;
+}
+
+.navbar-imitation > a:hover {
+	text-decoration: underline;
+}
+
+.navpadding {
+	padding-left: 20px;
+}
+
+.communitybtn {
+	background-color: #807608;
+	float: right;
+	margin-top: -50px;
+	margin-right: 20px;
+	border-radius: 3px;
+	border: 3px solid #9a9229;
+	font-size: 16px;
+	padding-bottom: 0;
+	padding-top: 3px;
+	letter-spacing: 1px;
+	padding-left: 6px;
+	padding-right: 4px;
+}
+
+.releasesbtn {
+	background-color: #770000;
+	float: right;
+	margin-top: -50px;
+	margin-right: 20px;
+	border-radius: 3px;
+	border: 3px solid #873f4a;
+	font-size: 15px;
+	letter-spacing: 1px;
+	padding: 3px 6px 4px 10px;
+}
+
+.communitybtn:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.releasesbtn:Hover {
+	text-decoration: none;
+	color: white;
+}
+
+.date {
+	font-size: 16px;
+	margin-top: -.1em;
+}
+
+.allejo {
+	font-size: 16px;
+	margin-top: -2.1em;
+	margin-left: -1.9em;
+}
+
+.bulldot {
+	font-size: 18px;
+	margin-left: -3em;
+	margin-top: -.4em;
+}
+
+.firstpara {
+	margin-top: 2em;
+}
+
+.allpara {
+	padding-right: 16px;
+	line-height: 20px;
+}
+
+.secondpara {
+	margin-top: 1.5em;
+}
+
+.stakx-logo {
+	margin-left: 34em;
+	margin-top: 2em;
+}
+
+.copyrightinfooter {
+	color: #D6BEDE;
+	font-size: 14px;
+	margin-top: 50em;
+}
+
+.gradient-radial-header {
+   background: radial-gradient(circle , #827487  1%, transparent 40%);
+   position: absolute;
+   z-index: -50;
+   height: 100%;
+   width: 100%;
+   opacity: .7;
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 90%;
+		height: 100%;
+	}
+
+	.navbarcontain {
+		width: 100%;
+		text-align: center;
+	}
+
+	.navpadding {
+		padding-left: 10px;
+	}
+
+	.stakx-logo {
+		margin-left: 0;
+		margin-right: 0;
+		position: relative;
+		left: 0;
+	}
+	.navbar-imitation {
+		display: inline-block;
+		margin-left: -2em;
+		font-size: 12px;
+	}
+
+	.why {
+		font-size: 24px;
+		margin-bottom: 1.5em;
+	}
+
+	.our {
+		font-size: 24px;
+		margin-bottom: 1.5em;
+	}
+
+	.dotallejo {
+		margin-left: 10em;
+		margin-top: -2.2em;
+	}
+
+	.combinedofboth {
+		margin-top: -20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.communitybtn {
+		float: left;
+		margin-top: .5em;
+	}
+	
+	.releasesbtn {
+		float: left;
+		margin-top: .5em;
+	}
+
+	.container__home__1 {
+		margin-top: 0;
+	}
+	.gradient-radial-header {
+		background: radial-gradient(circle , #827487 45%, transparent 90%);
+	}
+}
+
+@media (max-width: 320px) {
+	.container__home__1 {
+		padding-left: 25px;
+	}
+	.container__home__2 {
+		padding-left: 25px;
+	}
+}
+
+@media (device-width: 375px) {
+	.navpadding {
+		padding-left: 9px;
+	}
+}
+
+@media (max-width: 321px) {
+	.navpadding {
+		font-size: 10px;
+		padding-left: 7px;
+	}
+}
+
+@media (device-width: 360px) {
+	.navpadding {
+		padding-left: 6px;
+	}
+}
+
+@media (device-width: 768px) {
+	.navpadding {
+		margin-left: 20px;
+		font-size: 14px;
+	}
+	.navbar-imitation {
+		text-align: center;
+		margin-top: 7.5em;
+		margin-left: -5em;
+	}
+	.stakx-logo {
+		position: absolute;
+		margin-left: 22em;
+	}
+	.navbarcontain {
+		margin-left: 15em;
+	}
+
+	.container {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.communitybtn {
+		margin-top: -3.8em;
+	}
+
+	.releasesbtn {
+		margin-top: -4.2em;
+	}
+}
+
