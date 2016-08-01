@@ -2,35 +2,37 @@
 	font-family: 'Lato', sans-serif;
 }
 
-.container {
-	margin-top: 20px;
-	margin-bottom: 20px;
+.forumpost {
+	margin-bottom: 18px;
 	color: white;
-	padding: 20px;
-	padding-left: 35px;
+	padding: 35px 35px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
 }
 
 .container__home__1 {
-	margin-top: 3.5em;
-	width: 60em;
-	height: 45em;
 	background-image: url("../Images/fabric-light.png");
+	margin-top: 48px;
+}
+
+
+@media (min-width: 768px) {
+.container__home__1 {
+	margin-top: 75px;
+	margin-bottom: 25px;
+	}
 }
 
 .container__home__2 {
-	margin-top: 2em;
-	margin-bottom: 10em;
-	width: 60em;
-	height: 43.5em;
+	margin-bottom: 9em;
 	background-image: url("../Images/fabric-light.png");
 }
 
-.container__home__3 {
-	width: 54em;
-	height: 50em;
-	background-image: url("../Images/fabric-light.png");
-	margin-top: 3.5em;
-	margin-left: 8.2em;
+@media (min-width: 992px) {
+	.forumpost {
+		width: 70%;
+	}
 }
 
 .background-dpurple {
@@ -40,114 +42,270 @@
    background-color: #3c2d41;
 }
 
-.why {
-	font-size: 28px;
+.post-title {
+	font-size: 16px;
+	margin-top: 0;
+	word-spacing: 2px;
+	font-weight: bold;
 }
 
-.understand {
-	font-size: 28px;
-	margin-bottom: 1.2em;
+@media (min-width: 480px) {
+	.post-title {
+		font-size: 25px;
+		word-spacing: 3px;
+	}
 }
 
-.navbar-imitation {
-	margin-left: 22.5em;
-	margin-top: 1.5em;
-	font-size: 14px;
-	word-spacing: 3px;
+@media (min-width: 768px) {
+	.post-title {
+		font-size: 34px;
+		word-spacing: 4px;
+	}
 }
 
-.navbar-imitation > a {
+.menu-bar {
+	text-align: center;
+	margin-top: 0;
+	font-size: 10px;
+	word-spacing: 7px;
+	font-weight: bold;
+}
+
+@media (min-width: 480px) {
+	.menu-bar {
+		font-size: 14px;
+		word-spacing: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	.menu-bar {
+		font-size: 16px;
+		word-spacing: 21px;
+	}
+}
+
+@media (max-width: 303px) {
+	.menu-bar {
+		font-size: 9px;
+	}
+}
+
+
+.navbar-container {
+	padding: 0px 0px;
+}
+
+.gettingstarted {
+	word-spacing: 3px; 
+}
+
+.menu-bar > a {
 	color: #D6BEDE;
 }
 
-.navbar-imitation > a:hover {
+.menu-bar > a:hover {
 	text-decoration: underline;
 }
 
-.navpadding {
-	padding-left: 20px;
+.tag {
+	border-radius: 3px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
-.communitybtn {
+@media (min-width: 480px) {
+	.tag {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	.tag {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.tag {
+	float: right;
+	margin-top: -45px;
+	}
+}
+
+@media (device-width: 768px) {
+	.tag {
+	float: right;
+	margin-top: -45px;
+	}
+}
+
+.tag-green {
 	background-color: #807608;
-	float: right;
-	margin-top: -50px;
-	margin-right: 20px;
-	border-radius: 3px;
 	border: 3px solid #9a9229;
-	font-size: 16px;
-	padding-bottom: 0;
-	padding-top: 3px;
-	letter-spacing: 1px;
-	padding-left: 6px;
-	padding-right: 4px;
+	padding: 3px 6px 3px 6px;
 }
 
-.releasesbtn {
+.tag-red {
 	background-color: #770000;
-	float: right;
-	margin-top: -50px;
-	margin-right: 20px;
-	border-radius: 3px;
 	border: 3px solid #873f4a;
-	font-size: 15px;
-	letter-spacing: 1px;
-	padding: 3px 6px 4px 10px;
+	padding: 3px 6px 3px 6px;
+	margin-left: -1px;
 }
 
-.communitybtn:hover {
-	text-decoration: none;
-	color: white;
+@media (min-width: 768px) {
+	.date > p {
+		margin-left: 89px;
+	}
 }
 
-.releasesbtn:Hover {
-	text-decoration: none;
-	color: white;
+@media (min-width: 480px) {
+	.date-modifying-margin > p {
+		margin-left: 1.4em;
+	}
+}
+
+@media (min-width: 768px) {
+	.date-modifying-margin > p {
+		margin-left: 5.55em;
+	}
+}
+
+
+
+.caption {
+	margin-left: -7.8em;
+	float: left;
+	margin-top: -5px;
 }
 
 .date {
-	font-size: 16px;
-	margin-top: -.1em;
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 1em;
+	margin-left: 20px;
 }
 
-.allejo {
-	font-size: 16px;
-	margin-top: -2.1em;
-	margin-left: -1.9em;
+.date > p {
+	margin-bottom: 0;
+}
+
+.date-modifying-margin {
+	margin-left: 38px;
+}
+
+.author-caption {
+	display: inline-block;
+
+}
+
+.author {
+	font-size: 12px;
+	margin-bottom: 0;
+	margin-left: 2em;
 }
 
 .bulldot {
-	font-size: 18px;
-	margin-left: -3em;
-	margin-top: -.4em;
+	font-size: 14px;
+	margin-bottom: -1.3em;
+	margin-top: -19px;
 }
 
-.firstpara {
-	margin-top: 2em;
+@media (min-width: 480px) {
+	.bulldot {
+		font-size: 16px;
+	}
+	.author {
+		font-size: 14px;
+	}
 }
 
-.allpara {
-	padding-right: 16px;
+@media (min-width: 768px) {
+	.bulldot {
+		font-size: 18px;
+	}
+	.author {
+		font-size: 16px;
+	}
+}
+
+.post > p {
+	font-size: 12px;
+}
+
+@media (min-width: 480px) {
+	.post > p {
+		font-size: 13px;
+	}
+	.date {
+		font-size: 14px;
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.post > p {
+		font-size: 14px;
+	}
+	.date { 
+		font-size: 16px;
+		margin-left: 20px;
+	}
+}
+
+.post > p:first-child {
+	margin-top: 8.7em;
+}
+
+@media (min-width: 768px) {
+	.post > p:first-child {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	}
+}
+
+.post > p:nth-child(2) {
+	margin-bottom: 0;
+}
+
+.post > p:last-child {
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+
+.post > p {
+	padding-right: 0;
 	line-height: 20px;
 }
 
-.secondpara {
-	margin-top: 1.5em;
+.navbar-container {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.stakx-logo {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	}
 }
 
 .stakx-logo {
-	margin-left: 34em;
-	margin-top: 2em;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
-.copyrightinfooter {
+.copyright {
 	color: #D6BEDE;
 	font-size: 14px;
-	margin-top: 5em;
+	margin-top: -6em;
 }
 
 .gradient-radial-header {
-   background: radial-gradient(circle , #827487  1%, transparent 40%);
+   background: radial-gradient(circle , #827487  30%, transparent 60%);
    position: absolute;
    z-index: -50;
    height: 100%;
@@ -155,134 +313,19 @@
    opacity: .7;
 }
 
-@media (max-width: 768px) {
-	.container {
-		width: 90%;
-		height: 100%;
-	}
-
-	.navbarcontain {
-		width: 100%;
-		text-align: center;
-	}
-
-	.navpadding {
-		padding-left: 10px;
-	}
-
-	.stakx-logo {
-		margin-left: 0;
-		margin-right: 0;
-		position: relative;
-		left: 0;
-	}
-	.navbar-imitation {
-		display: inline-block;
-		margin-left: -2em;
-		font-size: 12px;
-	}
-
-	.why {
-		font-size: 24px;
-		margin-bottom: 1.5em;
-	}
-
-	.our {
-		font-size: 24px;
-		margin-bottom: 1.5em;
-	}
-
-	.dotallejo {
-		margin-left: 10em;
-		margin-top: -2.2em;
-	}
-
-	.combinedofboth {
-		margin-top: -20px;
-	}
-}
-
-@media (max-width: 767px) {
-	.communitybtn {
-		float: left;
-		margin-top: .5em;
-	}
-	
-	.releasesbtn {
-		float: left;
-		margin-top: .5em;
-	}
-
-	.container__home__1 {
-		margin-top: 0;
-	}
+@media (min-width: 768px) {
 	.gradient-radial-header {
-		background: radial-gradient(circle , #827487 45%, transparent 90%);
+	background: radial-gradient(circle , #827487  15%, transparent 40%);
 	}
 }
-
-@media (max-width: 320px) {
-	.container__home__1 {
-		padding-left: 25px;
-	}
-	.container__home__2 {
-		padding-left: 25px;
-	}
-}
-
-@media (device-width: 375px) {
-	.navpadding {
-		padding-left: 9px;
-	}
-}
-
-@media (max-width: 321px) {
-	.navpadding {
-		font-size: 10px;
-		padding-left: 7px;
-	}
-}
-
-@media (device-width: 360px) {
-	.navpadding {
-		padding-left: 6px;
-	}
-}
-
-@media (device-width: 768px) {
-	.navpadding {
-		margin-left: 20px;
-		font-size: 14px;
-	}
-	.navbar-imitation {
-		text-align: center;
-		margin-top: 7.5em;
-		margin-left: -5em;
-	}
-	.stakx-logo {
-		position: absolute;
-		margin-left: 22em;
-	}
-	.navbarcontain {
-		margin-left: 15em;
-	}
-
-	.container {
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.communitybtn {
-		margin-top: -3.8em;
-	}
-
-	.releasesbtn {
-		margin-top: -4.2em;
-	}
-}
-
+ 
 .firstline {
 	letter-spacing: 1px;
 	font-size: 18px;
+}
+
+@media (max-width: 306px) {
+	.post-title {
+		font-size: 14px;
+	}
 }
