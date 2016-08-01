@@ -326,6 +326,10 @@
 
 @media (max-width: 306px) {
 	.post-title {
-		font-size: 14px;
+		font-size: 13px;
 	}
+	.menu-bar { 
+		font-size: 9px;
+		word-spacing: 5px;
+	 }
 }
