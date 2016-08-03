@@ -16,11 +16,21 @@
 	margin-top: 48px;
 }
 
+.container__home__3 {
+	background-image: url("../Images/fabric-light.png");
+	margin-top: 48px;
+	float: left;
+	width: 70%;
+	margin-bottom: 9em;
+}
 
 @media (min-width: 768px) {
-.container__home__1 {
-	margin-top: 75px;
-	margin-bottom: 25px;
+	.container__home__1 {
+		margin-top: 75px;
+		margin-bottom: 25px;
+	}
+	.container__home__3 {
+		margin-top: 75px;
 	}
 }
 
@@ -28,6 +38,7 @@
 	margin-bottom: 9em;
 	background-image: url("../Images/fabric-light.png");
 }
+
 
 @media (min-width: 992px) {
 	.forumpost {
@@ -54,6 +65,9 @@
 		font-size: 25px;
 		word-spacing: 3px;
 	}
+	.post > .sub-title {
+		font-size: 19px;
+	}
 }
 
 @media (min-width: 768px) {
@@ -61,6 +75,14 @@
 		font-size: 34px;
 		word-spacing: 4px;
 	}
+	.post > .sub-title {
+		font-size: 22.5px;
+	}
+}
+
+.sub-title {
+	font-size: 15.5px;
+	word-spacing: 1px;
 }
 
 .menu-bar {
@@ -234,6 +256,7 @@
 
 .post > p {
 	font-size: 12px;
+	word-spacing: 1px;
 }
 
 @media (min-width: 480px) {
@@ -271,7 +294,7 @@
 	margin-bottom: 0;
 }
 
-.post > p:last-child {
+.post > p:nth-child(3) {
 	margin-bottom: 0;
 	margin-top: 20px;
 }
@@ -286,14 +309,7 @@
 	text-align: center;
 }
 
-@media (min-width: 768px) {
-	.stakx-logo {
-	margin-top: 60px;
-	margin-bottom: 20px;
-	}
-}
-
-.stakx-logo {
+.stakx-logo, .stakx-logo-2 {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
@@ -319,11 +335,6 @@
 	}
 }
  
-.firstline {
-	letter-spacing: 1px;
-	font-size: 18px;
-}
-
 @media (max-width: 306px) {
 	.post-title {
 		font-size: 13px;
@@ -332,4 +343,78 @@
 		font-size: 9px;
 		word-spacing: 5px;
 	 }
+}
+
+.post > h3 {
+		margin-top: 25px;
+		margin-bottom: 25px;
+}
+
+.document-title {
+	margin-bottom: 25px;
+}
+
+@media (min-width: 480px) {
+	.document-title {
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.document-title {
+		margin-bottom: 35px;
+	}
+}
+
+.post > .post-opener {
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+@media (min-width: 480px) {
+	.post > .post-opener {
+	font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	.post > .post-opener {
+		font-size: 16px;
+	}
+}
+
+.side-note {
+	float: right;
+	margin-top: 7em;
+	color: white;
+	margin-bottom: 0;	
+	width: 25%;
+	font-size: 12px;
+}
+
+@media (min-width: 480px) {
+	.side-note {
+		font-size: 16px;
+		margin-top: 5.5em;
+
+	}
+}
+
+@media (min-width: 768px) {
+	.side-note {
+		font-size: 20px;
+		margin-top: 6em;
+	}
+}
+
+.post > h5 {
+	margin-bottom: 3px;
+}
+
+.documentpost > p {
+	margin-bottom: 25px;
+}
+
+.documentpost > p:last-child {
+	margin-bottom: 0;
 }
