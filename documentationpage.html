@@ -20,7 +20,7 @@
 <body class="background-dpurple">
 	<div class="gradient-radial-header"></div>
 	<div class="container">
-		<div class="navbar-container">
+		<div class="header">
 			<img src="images/stakx-logo.png" class="stakx-logo">
 			<div class="menu-bar">
 				<a href="#">Home</a>
@@ -33,27 +33,33 @@
 	</div>
 
 	<div class="container">
-		<div class="forumpost container__home__3">
-			<div class="post documentpost">
-				<h2 class="post-title document-title">Understanding Stakx</h2>
-				<p class="post-opener">To_<strong><i>config.yml</i></strong> or not to_<strong><i>config.yml</i></strong></p>
-				<p>The _<strong>config.yml</strong> file is completely optional and a website can be built with the <i>--no-config</i> option. A configuration file is extremely useful and is recommended for a production-ready website but if it's quick and dirty, then you don't need one.</p>
-				<h3 class="sub-title">Stakx Data Types</h3>
-				<h5><strong>Collections</strong></h5>
-				<p>A Collection is a group of ContentItems. As an example, when building a blog, all of the posts together would be in a collection with an arbitrary name such as "posts."</p>
-				<h5><strong>ContentItems</strong></h5>
-				<p>A Contentitem is any element in your website that belongs in a collection. Continuing with the blog example, each post would become a ContentItem. Each ContentItem contains FrontMatter which allows you to specify information regarding the ContentItem such as author, categories, tags, and date posted.</p>
-				<h5><strong>DataItem</strong></h5>
-				<p>blah blah</p>
-				<h5><strong>DataSet</strong></h5>
-				<p>A DataSet is a group of DataItems</p>
-				<h5><strong>FrontMatter</strong></h5>
-				<p>FrontMatter is a section at the top of each ContentItem or PageView denoted by '...' with information such as variables or special values to trigger stakx behavior.</p>
-				<h5><strong>PageViews</strong></h5>
-				<p>A PageView is a Twig template with FrontMatter, Specific FrontMatter values have special meaning such as: <br>-pagination <br>-categories <br>-permalink <br>-title</p>
+		<div class="row">
+			<div class="col-md-9">
+				<div class="forumpost__2 container__home__3">
+					<h2 class="post-title">Understanding Stakx</h2>
+					<div class="post documentpost">
+						<p>To_<strong><i>config.yml</i></strong> or not to_<strong><i>config.yml</i></strong></p>
+						<p>The _<strong>config.yml</strong> file is completely optional and a website can be built with the <i>--no-config</i> option. A configuration file is extremely useful and is recommended for a production-ready website but if it's quick and dirty, then you don't need one.</p>
+						<h3>Stakx Data Types</h3>
+						<h5><strong>Collections</strong></h5>
+						<p>A Collection is a group of ContentItems. As an example, when building a blog, all of the posts together would be in a collection with an arbitrary name such as "posts."</p>
+						<h5><strong>ContentItems</strong></h5>
+						<p>A Contentitem is any element in your website that belongs in a collection. Continuing with the blog example, each post would become a ContentItem. Each ContentItem contains FrontMatter which allows you to specify information regarding the ContentItem such as author, categories, tags, and date posted.</p>
+						<h5><strong>DataItem</strong></h5>
+						<p>blah blah</p>
+						<h5><strong>DataSet</strong></h5>
+						<p>A DataSet is a group of DataItems</p>
+						<h5><strong>FrontMatter</strong></h5>
+						<p>FrontMatter is a section at the top of each ContentItem or PageView denoted by '...' with information such as variables or special values to trigger stakx behavior.</p>
+						<h5><strong>PageViews</strong></h5>
+						<p>A PageView is a Twig template with FrontMatter, Specific FrontMatter values have special meaning such as: <br>-pagination <br>-categories <br>-permalink <br>-title</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+			<h3 class="side-note">Working with Stakx</h3>	
 			</div>
 		</div>
-		<h3 class="side-note">Working with Stakx</h3>	
 	</div>
 
 	<div class="container">
