@@ -106,3 +106,4 @@ gulp.task("sass:lint", function(cb) {
 ///
 
 gulp.task('dev', ['sass:dev', 'dev:server', 'dev:watch']);
+gulp.task('dist', ['sass:dist']);
