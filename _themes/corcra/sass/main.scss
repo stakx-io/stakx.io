@@ -1,37 +1,44 @@
 @charset 'UTF-8';
 
-// 1. Configuration and helpers
+// Configuration and helpers
 @import
     'abstracts/variables',
     'abstracts/functions',
     'abstracts/mixins';
 
-// 2. Vendors
+// Vendors
 @import
     'vendor/normalize';
 
-// 3. Base stuff
+// Base stuff
 @import
     'base/base',
     'base/fonts',
     'base/typography',
     'base/helpers';
 
-// 4. Layout-related sections
+// Typography
+@import
+    'vendor/lato/lato-light',
+    'vendor/lato/lato-hairline',
+    'vendor/lato/lato-thin',
+    'vendor/lato/lato-heavy';
+
+// Layout-related sections
 @import
     'layout/page',
     'layout/header',
     'layout/footer';
 
-// 5. Components
+// Components
 @import
     'components/button',
     'components/terminal';
 
-// 6. Page-specific styles
+// Page-specific styles
 @import
     'pages/home';
 
-// 7. Themes
+// Themes
 @import
     'themes/default';

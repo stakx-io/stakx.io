@@ -1,0 +1,17 @@
+{
+  "https://github.com/FortAwesome/Font-Awesome.git": {
+    "4.7.0": "a3fe90fa5f6fac55d197f9cbd18e3f57dafb716c"
+  },
+  "https://github.com/LeaVerou/prefixfree.git": {
+    "1.0.10": "1.0.10"
+  },
+  "https://github.com/jquery/jquery-dist.git": {
+    "3.1.1": "1b30f3ad466ebf2714d47eda34dbd7fdf6849fe3"
+  },
+  "https://github.com/mrkelly/lato.git": {
+    "0.3.0": "6efb9074c041c2b8d522a244da1b71665e15bbc0"
+  },
+  "https://github.com/wilddeer/stickyfill.git": {
+    "1.1.4": "1.1.4"
+  }
+}
