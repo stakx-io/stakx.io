@@ -1,0 +1,73 @@
+---
+permalink: /
+---
+
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% block body %}
+    <div class="o-page-section">
+        <div class="container">
+            <div class="c-slogan">
+                <p class="c-slogan__heading">Building static websites, your way</p>
+                <p class="c-slogan__subheading">...yet another static website generator</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="c-terminal">
+                        <div class="c-terminal__header">
+                            <span class="c-terminal__circle c-terminal__circle--red"></span>
+                            <span class="c-terminal__circle c-terminal__circle--yellow"></span>
+                            <span class="c-terminal__circle c-terminal__circle--green"></span>
+                        </div>
+
+                        <div class="c-terminal__body">
+                            {% markdown %}
+                            ```yaml
+                            ---
+                            title: Quick Intro
+                            slug: What can stakx do out of the box?
+                            permalink: /blog/
+                            ---
+                            ```
+
+                            ```twig
+                            {% raw %}
+                            {% extends "@theme/layouts/base.html.twig" %}
+
+                            {% block content %}
+                                {% for post in collections.posts | order('date', 'DESC') %}
+                                    <article>
+                                        <h2>
+                                            <a href="{{ post.permalink }}">{{ post.title }}</a>
+                                        </h2>
+                                        <p class="text-muted"><strong>{{ post.date | date('F d, Y') }}</strong></p>
+                                    </article>
+                                {% endfor %}
+                            {% endblock %}
+                            {% endraw %}
+                            ```
+                            {% endmarkdown %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="o-page-section u-background-lpurple">
+        <div class="container">
+            <div class="row c-twig-showcase">
+                <div class="col-md-3 text-center c-twig-showcase__image">
+                    <img src="{{ url('assets/images/logo-twig.png') }}" alt="twig image" class="twig-img">
+                </div>
+                <div class="col-md-9">
+                    <h2 class="u-text--light-purple">Made for those with a PHP background</h2>
+                    <p><strong>Fast:</strong> Twig compiles templates down to plain optimized PPHP code. The overhead compared to regular PHP code was reduced to the very minimum.</p>
+                    <p><strong>Secure:</strong> Twig has a sandbox mode to evaluate untrusted template code. This allows Twig to be used as a template language for applications where users may modify the template design.</p>
+                    <p><strong>Flexible:</strong> Twig is powered by a flexible lexer and parser. This allows the developer to define its own custom tags and filters, and create its own DSL.</p>
+                    <p>&mdash; Twig</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

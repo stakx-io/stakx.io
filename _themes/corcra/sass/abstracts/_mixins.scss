@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+    @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+@mixin ul-inline() {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+        display: inline;
+    }
+}
+
+@mixin position($pos, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin margin-center() {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin size($size) {
+    height: $size;
+    width: $size;
+}
+
+@mixin respond-up($bp) {
+    $breakpoints: (
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+    );
+
+    @if (map-has-key($breakpoints, $bp)) {
+        @media (min-width: map-get($breakpoints, $bp)) {
+            @content;
+        }
+    }
+    @else {
+        @content;
+    }
+}

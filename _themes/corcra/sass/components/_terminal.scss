@@ -1,0 +1,51 @@
+.c-terminal {
+    font-size: 14px;
+}
+
+.c-terminal__header {
+    background-color: #f5f5f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 7px 10px;
+
+    // CSS hack to counteract the extra whitespace of `inline-block` elements
+    font-size: 0;
+}
+
+.c-terminal__circle {
+    @include size(12px);
+
+    border-radius: 15px;
+    display: inline-block;
+    margin-right: 5px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--red {
+        background-color: #B55917;
+    }
+
+    &--yellow {
+        background-color: #E1A12C;
+    }
+
+    &--green {
+        background-color: #78C775;
+    }
+}
+
+.c-terminal__body {
+    background-color: #2B2B2B;
+    padding: 15px;
+
+    code,
+    pre {
+        background-color: transparent;
+        border: transparent;
+        color: #abb2bf;
+        margin: 0;
+        padding: 0;
+    }
+}

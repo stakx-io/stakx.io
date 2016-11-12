@@ -1,0 +1,29 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+pre code {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.u-text--light-purple {
+    color: $palette-light-purple;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ this.title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url('assets/css/atom-one-dark.css') }}">
+        <link rel="stylesheet" href="{{ url('assets/css/main.css') }}">
+    </head>
+
+    <body class="u-background-dpurple">
+        <div class="c-gradient-radial-header"></div>
+        <div class="container">
+            <div class="row c-header">
+                <div class="c-header__logo">
+                    <img src="{{ url('assets/images/stakx-logo.png') }}" alt="stakx" class="stakx">
+                </div>
+                <ul class="c-navigation u-list-inline">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Getting Started</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Github</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {% block body %}{% endblock %}
+
+        <footer>
+            <div class="container">
+                <p class="text-center">Copyright &copy; 2016</p>
+            </div>
+        </footer>
+    </body>
+</html>

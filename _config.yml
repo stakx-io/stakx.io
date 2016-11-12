@@ -1,0 +1,14 @@
+exclude:
+  - README.md
+  - feed.xml
+  - /.html$/
+  - yarn.lock
+
+pageviews:
+  - _pages
+
+theme: corcra
+debug: true
+
+# Site Configuration
+title: stakx - Yet Another Static Website Generator

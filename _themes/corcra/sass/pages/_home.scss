@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.c-slogan {
+    color: #fff;
+    margin-bottom: 60px;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}
+
+.c-slogan__heading {
+    font-size: 45px;
+    font-weight: 100;
+}
+
+.c-slogan__subheading {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.c-twig-showcase {
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.c-twig-showcase__image {
+    margin-bottom: 30px;
+
+    @include respond-up(md) {
+        margin-bottom: 0;
+    }
+}
