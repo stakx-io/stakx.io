@@ -8,7 +8,7 @@
     text-align: center;
 
     @include respond-up(md) {
-        @include padding-y(50px);
+        @include padding-y(60px);
     }
 }
 
