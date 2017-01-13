@@ -51,11 +51,18 @@
     padding-top: $padding;
 }
 
+@mixin margin-x($margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+@mixin margin-y($margin) {
+    margin-bottom: $margin;
+    margin-top: $margin;
+}
+
 @mixin margin-center() {
-    margin: {
-        left: auto;
-        right: auto;
-    }
+    @include margin-y(auto);
 }
 
 @mixin size($size) {
