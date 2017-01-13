@@ -4,6 +4,10 @@ exclude:
   - /.html$/
   - yarn.lock
 
+collections:
+  - name: docs
+    folder: _docs
+
 pageviews:
   - _pages
 
