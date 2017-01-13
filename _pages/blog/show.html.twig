@@ -1,0 +1,21 @@
+---
+permalink: /news/%year/%title/
+collection: posts
+---
+
+{% extends '@theme/layouts/container.html.twig' %}
+
+{% block content %}
+    <article class="c-article">
+        <header class="c-article__header">
+            <h2>
+                <a href="{{ url(this.permalink) }}">{{ this.title }}</a>
+            </h2>
+            <p>{{ this.date | date('F d, Y') }}</p>
+        </header>
+
+        <div class="c-article__body">
+            {{ this.content }}
+        </div>
+    </article>
+{% endblock %}

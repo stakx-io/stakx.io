@@ -3,4 +3,21 @@ title: News
 permalink: /news/
 ---
 
-{% extends '@theme/layouts/base.html.twig' %}
+{% extends '@theme/layouts/aside.html.twig' %}
+
+{% block content %}
+    {% for post in collections.posts | order('date', 'DESC') %}
+        <article class="c-article">
+            <header class="c-article__header">
+                <h2>
+                    <a href="{{ url(post) }}">{{ post.title }}</a>
+                </h2>
+                <p>{{ post.date | date('F d, Y') }}</p>
+            </header>
+
+            <div class="c-article__body">
+                {{ post.content | summary }}
+            </div>
+        </article>
+    {% endfor %}
+{% endblock %}
