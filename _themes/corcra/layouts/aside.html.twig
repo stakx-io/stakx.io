@@ -1,0 +1,15 @@
+{% extends '@theme/layouts/base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <section class="col-md-9 c-{{ content_class | default('content') }} {{ content_classes | default() }}">
+                {% block content %}{% endblock %}
+            </section>
+
+            <aside class="col-md-3 c-{{ aside_class | default('aside') }} {{ aside_classes | default() }}">
+                {% block aside %}{% endblock %}
+            </aside>
+        </div>
+    </div>
+{% endblock %}
