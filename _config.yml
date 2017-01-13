@@ -5,6 +5,8 @@ exclude:
   - yarn.lock
 
 collections:
+  - name: posts
+    folder: _posts
   - name: docs
     folder: _docs
 
