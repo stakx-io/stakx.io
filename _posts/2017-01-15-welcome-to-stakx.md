@@ -1,6 +1,7 @@
 ---
 title: Welcome to stakx
 date: 2017-01-15
+author: allejo
 categories:
   - announcement
 ---

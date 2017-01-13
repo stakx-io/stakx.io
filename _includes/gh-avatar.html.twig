@@ -1,0 +1,21 @@
+{% macro __avatar_url(username, size) -%}
+    https://avatars.githubusercontent.com/{{ username }}?v=3&s={{ size }}
+{%- endmacro %}
+
+{% macro gh_avatar(username = 'octocat', size = 48) %}
+    {% set srcset = [] %}
+
+    {% for i in (1..4) %}
+        {% set set = '%s %dx'| format(_self.__avatar_url(username, size * i), i) %}
+        {% set srcset = srcset | merge([ set ]) %}
+    {% endfor %}
+
+    <img
+         src="{{ _self.__avatar_url(username, size) }}"
+         srcset="{{ srcset | join(', ') }}"
+         alt="{{ username }}"
+         height="{{ size }}"
+         width="{{ size }}"
+         data-proofer-ignore="true"
+    >
+{% endmacro %}

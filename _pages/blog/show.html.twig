@@ -4,6 +4,7 @@ collection: posts
 ---
 
 {% extends '@theme/layouts/container.html.twig' %}
+{% import  '_includes/gh-avatar.html.twig' as gh %}
 
 {% block content %}
     <article class="c-article">
@@ -11,7 +12,14 @@ collection: posts
             <h2>
                 <a href="{{ url(this.permalink) }}">{{ this.title }}</a>
             </h2>
-            <p>{{ this.date | date('F d, Y') }}</p>
+            <div>
+                <span>{{ this.date | date('F d, Y') }}</span>
+                &bull;
+                <a href="https://github.com/{{ this.author }}">
+                    {{ gh.gh_avatar(this.author, 24) }}
+                    {{ this.author }}
+                </a>
+            </div>
         </header>
 
         <div class="c-article__body">
