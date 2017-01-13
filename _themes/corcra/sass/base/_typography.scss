@@ -4,8 +4,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 200;
     margin-bottom: 15px;
+
+    @include respond-up(md) {
+        font-weight: 200;
+    }
 }
 
 h1 {

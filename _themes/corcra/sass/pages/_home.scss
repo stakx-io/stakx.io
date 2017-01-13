@@ -6,20 +6,29 @@
     color: #fff;
     margin-bottom: 60px;
     text-align: center;
-
-    p {
-        margin: 0;
-    }
 }
 
 .c-slogan__heading {
-    font-size: 45px;
-    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: 0.5em;
+
+    @include respond-down(md) {
+        line-height: 1em;
+    }
+
+    @include respond-up(sm) {
+        font-size: 45px;
+        font-weight: 100;
+        margin-bottom: 0;
+    }
 }
 
 .c-slogan__subheading {
     font-size: 18px;
-    font-weight: 100;
+
+    @include respond-up(sm) {
+        font-weight: 100;
+    }
 }
 
 .c-twig-showcase {
@@ -39,5 +48,11 @@
 
     @include respond-up(md) {
         margin-bottom: 0;
+    }
+
+    img {
+        @include respond-down(md) {
+            height: 175px;
+        }
     }
 }
