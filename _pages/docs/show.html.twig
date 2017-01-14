@@ -1,0 +1,17 @@
+---
+permalink: /docs/%title/
+collection: docs
+---
+
+{% extends '@theme/layouts/aside.html.twig' %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>{{ this.title }}</h1>
+        </header>
+        <div>
+            {{ this.content }}
+        </div>
+    </article>
+{% endblock %}

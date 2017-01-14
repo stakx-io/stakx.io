@@ -1,0 +1,27 @@
+{% macro news_article(object, summary = false) %}
+    {% import  '_includes/gh-avatar.html.twig' as gh %}
+
+    <article class="c-article">
+        <header class="c-article__header">
+            <h2>
+                <a href="{{ url(object) }}">{{ object.title }}</a>
+            </h2>
+            <div>
+                <span>{{ object.date | date('F d, Y') }}</span>
+                &bull;
+                <a href="https://github.com/{{ object.author }}">
+                    {{ gh.gh_avatar(object.author, 24) }}
+                    {{ object.author }}
+                </a>
+            </div>
+        </header>
+
+        <div class="c-article__body">
+            {% if summary %}
+                {{ object.content | summary }}
+            {% else %}
+                {{ object.content }}
+            {% endif %}
+        </div>
+    </article>
+{% endmacro %}

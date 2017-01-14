@@ -10,9 +10,13 @@ collections:
   - name: docs
     folder: _docs
 
+data:
+  - _data
+
 pageviews:
   - _pages
 
 theme: corcra
+debug: true
 
 title: stakx - Yet Another Static Website Generator

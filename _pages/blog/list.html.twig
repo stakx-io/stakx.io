@@ -4,20 +4,19 @@ permalink: /news/
 ---
 
 {% extends '@theme/layouts/aside.html.twig' %}
+{% import  '_includes/news-article.html.twig' as news %}
 
 {% block content %}
     {% for post in collections.posts | order('date', 'DESC') %}
-        <article class="c-article">
-            <header class="c-article__header">
-                <h2>
-                    <a href="{{ url(post) }}">{{ post.title }}</a>
-                </h2>
-                <p>{{ post.date | date('F d, Y') }}</p>
-            </header>
-
-            <div class="c-article__body">
-                {{ post.content | summary }}
-            </div>
-        </article>
+        {{ news.news_article(post, true) }}
     {% endfor %}
+{% endblock %}
+
+{% block aside %}
+    <h4>Categories</h4>
+    <ul class="list-unstyled">
+        {% for category in data.categories %}
+            <li>{{ category | title }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
