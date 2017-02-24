@@ -27,6 +27,10 @@
     li {
         margin-right: 15px;
 
+        a {
+            color: $palette-light-purple;
+        }
+
         &:nth-child(3) {
             @include respond-down(ms) {
                 margin-right: 0;

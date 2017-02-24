@@ -29,11 +29,11 @@ body {
 }
 
 a {
-    color: $palette-light-purple;
+    color: $palette-yellow;
     text-decoration: none;
 
     @include on-event {
-        color: $palette-light-purple;
+        color: $palette-yellow;
         text-decoration: underline;
     }
 }
