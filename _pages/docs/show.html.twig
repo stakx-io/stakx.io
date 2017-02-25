@@ -5,6 +5,27 @@ collection: docs
 
 {% extends '@theme/layouts/aside.html.twig' %}
 
+{% set aside_classes = 'c-docs_nav' %}
+{% set content_classes = 'c-docs_body' %}
+
+{% macro nav(entries) %}
+    <ul>
+        {% for entry in entries %}
+            <li>
+                {% if entry.route %}
+                    <a href="{{ url(collections.docs[entry.route]) }}">{{ entry.name }}</a>
+                {% else %}
+                    {{ entry.name }}
+                {% endif %}
+
+                {% if entry.children %}
+                    {{ _self.nav(entry.children) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
 {% block content %}
     <article>
         <header>
@@ -14,4 +35,8 @@ collection: docs
             {{ this.content }}
         </div>
     </article>
+{% endblock %}
+
+{% block aside %}
+    {{ _self.nav(data.documentation) }}
 {% endblock %}

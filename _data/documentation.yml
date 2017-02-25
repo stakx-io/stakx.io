@@ -1,0 +1,8 @@
+- name: Welcome
+  route: index
+- name: Documentation
+  children:
+    - name: Front Matter
+      route: front-matter
+    - name: Page Views
+      route: pageviews

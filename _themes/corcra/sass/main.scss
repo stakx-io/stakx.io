@@ -36,11 +36,13 @@
 @import
     'components/article',
     'components/button',
+    'components/code',
     'components/terminal';
 
 // Page-specific styles
 @import
-    'pages/home';
+    'pages/home',
+    'pages/docs';
 
 // Themes
 @import
