@@ -83,10 +83,6 @@ permalink:
 ---
 ```
 
-### `menu`
-
-The `menu` key is a boolean that when set to false, will result in a static PageView from not appearing in the `menu` variable typically used to build the site's menu.
-
 ### `iterators`
 
 The `iterators` Front Matter key should be never be set manually and instead is only available in Repeater PageViews.
