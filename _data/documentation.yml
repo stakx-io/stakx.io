@@ -4,5 +4,5 @@
   children:
     - name: Front Matter
       route: front-matter
-    - name: Page Views
+    - name: PageViews
       route: pageviews
