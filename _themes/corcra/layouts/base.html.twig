@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{ url('assets/css/main.css') }}">
     </head>
 
-    <body class="u-background-dpurple">
+    <body class="u-background u-background--dpurple">
         <div class="container">
             <div class="row c-header">
                 <div class="c-header__logo">
@@ -36,5 +36,9 @@
                 <p class="text-center">Copyright &copy; {{ 'now' | date('Y') }}</p>
             </div>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="{{ url('assets/js/background-blend-mode.js') }}"></script>
+        <script src="{{ url('assets/js/main.js') }}"></script>
     </body>
 </html>
