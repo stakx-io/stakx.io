@@ -1,4 +1,4 @@
-.c-docs_body {
+.c-docs__body {
     header > h1 {
         margin-top: 0;
     }
@@ -8,7 +8,40 @@
     }
 }
 
-.c-docs_nav {
+.c-docs__callout {
+    @extend .u-background;
+
+    border-left-style: solid;
+    border-left-width: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.c-docs__callout--warning {
+    background-color: #874b47;
+    border-left-color: #b90000;
+}
+
+.c-docs__callout--future {
+    background-color: #876547;
+    border-left-color: #b96f00;
+}
+
+.c-docs__callout--tip {
+    background-color: #678060;
+    border-left-color: #58a95a;
+}
+
+.c-docs__callout--note {
+    background-color: #476c87;
+    border-left-color: #008eb9;
+}
+
+.c-docs__nav {
     ul {
         list-style: none;
         margin-bottom: 0;

@@ -1,0 +1,22 @@
+{% macro _callout(class, heading, content) %}
+<div class="c-docs__callout c-docs__callout--{{ class }}">
+    <p><strong>{{ heading }}</strong></p>
+    <p>{{ content | markdown }}</p>
+</div>
+{% endmacro %}
+
+{% macro warning(heading, content) %}
+{{ _self._callout('warning', heading, content)}}
+{% endmacro %}
+
+{% macro tip(heading, content) %}
+{{ _self._callout('tip', heading, content)}}
+{% endmacro %}
+
+{% macro note(heading, content) %}
+{{ _self._callout('note', heading, content)}}
+{% endmacro %}
+
+{% macro future(heading, content) %}
+{{ _self._callout('future', heading, content)}}
+{% endmacro %}

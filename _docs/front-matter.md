@@ -3,6 +3,8 @@ title: Front Matter
 category: documentation
 ---
 
+{% import '_includes/callouts.html.twig' as callouts %}
+
 All PageViews and ContentItems in stakx begin with Front Matter at the top of file surrounded by a set of three dashes. In between the dashes, use [YAML](http://yaml.org/) to define information relating to the respective document. Here's an example of what it looks like:
 
 ```yaml
@@ -14,7 +16,11 @@ date: 2017-01-12
 
 You may define any variables you'd like in your Front Matter and they will be accessible in the Twig template as a child to the `this` variable. With the example above, you would access the title of your blog post by using `{% raw %}{{ this.title }}{% endraw %}` in your Twig template.
 
-> **Warning:** There are certain Front Matter keys that are reserved or have special behavior so be sure you're using them as intended ([see below](#special-front-matter-keys)).
+{% set notice %}
+There are certain Front Matter keys that are reserved or have special behavior so be sure you're using them as intended ([see below](#special-front-matter-keys)).
+{% endset %}
+
+{{ callouts.warning('Reserved keys', notice) }}
 
 ## Variables in Front Matter
 
