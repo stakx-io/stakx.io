@@ -3,6 +3,8 @@ exclude:
   - feed.xml
   - /.html$/
   - yarn.lock
+  - /.phar$/
+  - Makefile
 
 collections:
   - name: posts
