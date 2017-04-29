@@ -91,3 +91,7 @@
         @content;
     }
 }
+
+@mixin background-blend-hack($color, $bg-image: 'fabric-white.jpg') {
+    background-image: linear-gradient(to right, $color 0%, $color 100%), image($bg-image);
+}

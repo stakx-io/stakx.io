@@ -1,14 +1,24 @@
 .u-background {
     background-blend-mode: multiply;
-    background-image: image('fabric-white.png');
+    background-image: image('fabric-white.jpg');
 }
 
 .u-background--dpurple {
-    background-color: #514157;
+    @include background-blend-hack(#514157);
 }
 
 .u-background--lpurple {
-    background-color: #736679;
+    @include background-blend-hack(#736679);
+}
+
+.no-backgroundblendmode {
+    .u-background--dpurple {
+        background-image: image('fabric-dpurple.jpg');
+    }
+
+    .u-background--lpurple {
+        background-image: image('fabric-lpurple.jpg');
+    }
 }
 
 .o-page-section {
