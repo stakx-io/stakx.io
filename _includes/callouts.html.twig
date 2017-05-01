@@ -1,7 +1,7 @@
 {% macro _callout(class, heading, content) %}
 <div class="c-docs__callout c-docs__callout--{{ class }}">
-    <p><strong>{{ heading }}</strong></p>
-    <p>{{ content | markdown }}</p>
+    <p class="c-docs__callout__heading"><strong>{{ heading }}</strong></p>
+    {{ content | markdown }}
 </div>
 {% endmacro %}
 
