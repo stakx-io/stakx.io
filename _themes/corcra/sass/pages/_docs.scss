@@ -6,6 +6,52 @@
     h2 {
         margin-top: 30px;
     }
+
+    h2, h3 {
+        border-bottom: 1px solid #8a8a8a;
+        padding-bottom: 10px;
+    }
+
+    table {
+        border-top: 1px solid #8a8a8a;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        width: 100%;
+
+        th {
+            padding: 15px;
+        }
+
+        td {
+            border: 1px solid #8a8a8a;
+            padding: 15px;
+
+            &:first-child {
+                border-left-color: transparent;
+                padding-left: 0;
+            }
+
+            &:last-child {
+                border-right-color: transparent;
+                padding-right: 0;
+            }
+        }
+    }
+    
+    h1, h2, h3,
+    h4, h5, h6 {
+        & + table {
+            border-top: 0;
+
+            th {
+                padding-top: 0;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
 }
 
 .c-docs__callout {
@@ -21,38 +67,55 @@
     }
 }
 
-.c-docs__callout--warning {
-    @include background-blend-hack(#874b47);
-    border-left-color: #b90000;
-}
-
-.c-docs__callout--future {
-    @include background-blend-hack(#876547);
-    border-left-color: #b96f00;
-}
-
-.c-docs__callout--tip {
-    @include background-blend-hack(#678060);
-    border-left-color: #58a95a;
-}
-
-.c-docs__callout--note {
-    @include background-blend-hack(#476c87);
-    border-left-color: #008eb9;
-}
-
-.no-backgroundblendmode {
-    .c-docs__callout--warning {
-        background-image: image('fabric-red.jpg');
+.c-docs__callout__heading {
+    &:before {
+        display: inline-block;
+        font-family: FontAwesome;
+        margin-right: 10px;
     }
-    .c-docs__callout--future {
-        background-image: image('fabric-yellow.jpg');
+}
+
+$_headings: (
+    warning: (
+        bg: #874b47,
+        border: #b90000,
+        fa: '\f071',
+        fabric: 'red',
+    ),
+    future: (
+        bg: #876547,
+        border: #b96f00,
+        fa: '\f017',
+        fabric: 'yellow',
+    ),
+    tip: (
+        bg: #678060,
+        border: #58a95a,
+        fa: '\f0eb',
+        fabric: 'green',
+    ),
+    note: (
+        bg: #476c87,
+        border: #008eb9,
+        fa: '\f24a',
+        fabric: 'blue',
+    )
+);
+
+@each $name, $settings in $_headings {
+    .c-docs__callout--#{$name} {
+        @include background-blend-hack(map-get($settings, 'bg'));
+        border-left-color: map-get($settings, 'border');
+
+        .c-docs__callout__heading:before {
+            content: map-get($settings, 'fa');
+        }
     }
-    .c-docs__callout--tip {
-        background-image: image('fabric-green.jpg');
-    }
-    .c-docs__callout--note {
-        background-image: image('fabric-blue.jpg');
+
+    .no-backgroundblendmode {
+        .c-docs__callout--#{$name} {
+            background-image: image('fabric-' + map-get($settings, 'fabric') + '.jpg');
+        }
     }
 }
 
