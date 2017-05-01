@@ -92,6 +92,14 @@
     }
 }
 
+///
+/// This function generates a solid linear gradient with an image background. This is necessary due to the fact that
+/// mobile webkit won't blend `background-color` and `background-image` but it will blend all the `background-image`
+/// values together.
+///
+/// @param {Color}  $color
+/// @param {String} $bg-image
+///
 @mixin background-blend-hack($color, $bg-image: 'fabric-white.jpg') {
     background-image: linear-gradient(to right, $color 0%, $color 100%), image($bg-image);
 }
