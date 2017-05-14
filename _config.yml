@@ -10,7 +10,7 @@ collections:
   - name: posts
     folder: _posts
   - name: docs
-    folder: _docs
+    folder: _docs/user
 
 data:
   - _data
