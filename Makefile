@@ -5,6 +5,7 @@ build:
 	node_modules/.bin/bower-installer; \
 	node_modules/.bin/gulp dist; \
 	wget https://getcomposer.org/composer.phar; \
+	chmod +x composer.phar; \
 	git clone https://github.com/stakx-io/stakx.git; \
 	cd stakx; \
 	../composer.phar install --no-dev -o; \
