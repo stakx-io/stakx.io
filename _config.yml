@@ -5,6 +5,7 @@ exclude:
   - yarn.lock
   - /.phar$/
   - Makefile
+  - stakx/
 
 collections:
   - name: posts
