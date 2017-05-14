@@ -1,0 +1,57 @@
+---
+collection: twig-filters
+permalink: /docs/twig/%basename/
+---
+
+{% extends '_layouts/docs.html.twig' %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>Twig :: {{ this.basename }}</h1>
+        </header>
+        <div>
+            <p>{{ this.summary | markdown }}</p>
+
+            <h2 id="since">Since</h2>
+            <p>{{ this.since }}</p>
+
+            <p><strong>Changelog</strong></p>
+            <ul>
+                {% for c in this.changelog %}
+                    <li>{{ c.since }} - {{ c.note | markdown | replace({'<p>': '', '</p>': ''}) }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2 id="usage">Usage</h2>
+
+            {% set parameters = this.parameters | select('name', false, false, false) %}
+            {% set default_args = this.parameters | select('default', false, false, false) %}
+            {% markdown %}
+            ```twig
+            {{ this.basename }}({{ parameters | zip(default_args, ' = ') | join(', ') }})
+            ```
+            {% endmarkdown %}
+
+            <h2 id="parameters">Parameters</h2>
+
+            <ul>
+                {% for p in this.parameters %}
+                    <li>
+                        <p>
+                            {% if not p.default %}(required){% endif %}
+                            <code>{{ p.name }}</code> : {{ p.type }}
+                        </p>
+                        <p>
+                            {{ p.description | markdown }}
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <h2 id="example-usage">Example Usage</h2>
+
+            {{ this.content }}
+        </div>
+    </article>
+{% endblock %}

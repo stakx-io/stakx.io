@@ -6,3 +6,5 @@
       route: front-matter
     - name: PageViews
       route: pageviews
+    - name: Twig
+      route: twig

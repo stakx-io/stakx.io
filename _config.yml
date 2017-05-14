@@ -11,6 +11,8 @@ collections:
     folder: _posts
   - name: docs
     folder: _docs/user
+  - name: twig-filters
+    folder: _docs/twig
 
 data:
   - _data
