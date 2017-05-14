@@ -16,12 +16,14 @@ permalink: /docs/twig/%basename/
             <h2 id="since">Since</h2>
             <p>{{ this.since }}</p>
 
-            <p><strong>Changelog</strong></p>
-            <ul>
-                {% for c in this.changelog %}
-                    <li>{{ c.since }} - {{ c.note | markdown | replace({'<p>': '', '</p>': ''}) }}</li>
-                {% endfor %}
-            </ul>
+            {% if this.changelog %}
+                <p><strong>Changelog</strong></p>
+                <ul>
+                    {% for c in this.changelog %}
+                        <li>{{ c.since }} - {{ c.note | markdown | replace({'<p>': '', '</p>': ''}) }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
 
             <h2 id="usage">Usage</h2>
 
