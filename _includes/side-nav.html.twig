@@ -1,0 +1,19 @@
+{% macro nav(entries) %}
+    <ul>
+        {% for entry in entries %}
+            <li>
+                {% if entry.route %}
+                    <a href="{{ url(collections.docs[entry.route]) }}">{{ entry.name }}</a>
+                {% else %}
+                    {{ entry.name }}
+                {% endif %}
+
+                {% if entry.children %}
+                    {{ _self.nav(entry.children) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{{ _self.nav(data.documentation) }}
