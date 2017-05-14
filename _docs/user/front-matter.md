@@ -16,11 +16,10 @@ date: 2017-01-12
 
 You may define any variables you'd like in your Front Matter and they will be accessible in the Twig template as a child to the `this` variable. With the example above, you would access the title of your blog post by using `{% raw %}{{ this.title }}{% endraw %}` in your Twig template.
 
-{% set notice %}
-There are certain Front Matter keys that are reserved or have special behavior so be sure you're using them as intended ([see below](#special-front-matter-keys)).
-{% endset %}
-
-{{ callouts.warning('Reserved keys', notice) }}
+{{ callouts.warning(
+    'Reserved keys', 
+    "There are certain Front Matter keys that are reserved or have special behavior so be sure you're using them as intended ([see below](#special-front-matter-keys))."
+) }}
 
 ## Variables in Front Matter
 
@@ -39,11 +38,10 @@ permalink: /authors/%fullName/ # /authors/scott-pilgrim/
 
 Variables in Front Matter only support letters for variable names, so using `%some_var_name` would be treated as calling the `%some` variable and appending the string `_var_name` to that value.
 
-{% set notice %}
-If you need to use the `%` symbol as a value for a perctange, you will need to escape it with a backslash (i.e. `\%`).
-{% endset %}
-
-{{ callouts.tip('Escaping the %', notice) }}
+{{ callouts.tip(
+    'Escaping the %', 
+    "If you need to use the `%` symbol as a value for a perctange, you will need to escape it with a backslash (i.e. `\%`)."
+) }}
 
 ##  Special Front Matter Keys
 
@@ -59,10 +57,10 @@ As mentioned before, there are certain Front Matter keys that have special behav
 | `collection` <br> `dataset` | These keys are reserved for defining [Dynamic PageViews]({{ url(collections.docs['pageviews']) }}#dynamic-pageviews).
 | `permalink` | This key defines the URL that a given [PageView]({{ url(collections.docs['pageviews']) }}) will use |
 
-{% set notice %}
-The dates parsed will respect the timezone set in your `php.ini` **unless** a timezone is explicitly defined in the timestamp provided.
-{% endset %}
-{{ callouts.tip('Dates respect timezones', notice)}}
+{{ callouts.tip(
+    'Dates respect timezones',
+    "The dates parsed will respect the timezone set in your `php.ini` **unless** a timezone is explicitly defined in the timestamp provided."
+)}}
 
 ### Reserved Keys
 
