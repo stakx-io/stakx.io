@@ -3,6 +3,8 @@ title: PageViews
 category: documentation
 ---
 
+{% import '_includes/callouts.html.twig' as callouts %}
+
 stakx is designed to behave like the "controller" of an MVC framework meaning all logic on how your content and data is displayed within your website is left up to the most powerful feature, PageViews. This means that extending layouts is left up to the Twig in your PageViews using `{% raw %}{% extends %}{% endraw%}` and not to a `layout` key in Front Matter, for example.
 
 Because the default stakx configuration is designed to have the bare minimum, the location of where your PageViews will be stored is up to you. Define the `pageviews` value in your `_config.yml` and have an array of where your PageViews will be stored; as a convention, use a `_pages` folder to house all of them but you may define as many as you like.
@@ -52,7 +54,7 @@ permalink: /blog/%title/
 
 The following dynamic PageView will generate a separate page for each ContentItem available in the `posts` Collection. During each iteration of ContentItems, Twig has access to a merged Front Matter between the ContentItem and the PageView, including variables!
 
-Here's the what combined and evaluated Front Matter would look like for the iteration of the blog post in our sample:
+Here's what the combined and evaluated Front Matter would look like for the iteration of the blog post in our sample:
 
 ```yaml
 ---
@@ -90,7 +92,10 @@ The above example will generate four separate pages:
 
 In your Twig templates, you have access to the special `this.iterators` array that has keys respective to the Front Matter variable and the value of the current iteration for your template. In the above example, `this.iterators.categories` will be set to `announcements` when the `/blog/categories/announcements/` page is being generated and so on.
 
-> **Heads Up!** The "value expansion" feature is only available to the `permalink` Front Matter key; an error will be thrown if used for any other key.
+{{ callouts.tip(
+  'Heads Up',
+  'The "value expansion" feature is only available to the `permalink` Front Matter key; an error will be thrown if used for any other key.'
+) }}
 
 ## Permalinks
 
