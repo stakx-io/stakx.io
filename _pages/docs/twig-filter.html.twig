@@ -37,19 +37,23 @@ permalink: /docs/twig/%basename/
 
             <h2 id="parameters">Parameters</h2>
 
-            <ul>
-                {% for p in this.parameters %}
-                    <li>
-                        <p>
-                            {% if not p.default %}(required){% endif %}
-                            <code>{{ p.name }}</code> : {{ p.type }}
-                        </p>
-                        <p>
-                            {{ p.description | markdown }}
-                        </p>
-                    </li>
-                {% endfor %}
-            </ul>
+            {% if this.parameters is not empty %}
+                <ul>
+                    {% for p in this.parameters %}
+                        <li>
+                            <p>
+                                {% if not p.default %}(required){% endif %}
+                                <code>{{ p.name }}</code> : {{ p.type }}
+                            </p>
+                            <p>
+                                {{ p.description | markdown }}
+                            </p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p><em>This filter does not accept any parameters</em></p>
+            {% endif %}
 
             <h2 id="example-usage">Example Usage</h2>
 
