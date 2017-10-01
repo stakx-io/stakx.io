@@ -8,38 +8,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
         <link rel="stylesheet" href="{{ url('assets/css/atom-one-dark.css') }}">
         <link rel="stylesheet" href="{{ url('assets/css/main.css') }}">
     </head>
 
     <body class="u-background u-background--dpurple">
         <div class="container">
-            <div class="row c-header">
-                <div class="c-header__logo">
-                    <img src="{{ url('assets/images/stakx.svg') }}" alt="stakx" class="stakx">
-                </div>
-                <ul class="c-navigation u-list-inline">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ url(pages.News) }}">News</a></li>
-                    {#<li><a href="#">Getting Started</a></li>#}
-                    <li class="c-navigation__linebreak"></li> {# This is how we'll force a line break on mobile devices #}
-                    <li><a href="{{ url(collections.docs['index']) }}">Documentation</a></li>
-                    <li><a href="https://github.com/stakx-io/stakx">Github</a></li>
-                </ul>
+            <div class="pt-5 pb-3 text-center">
+                <img src="{{ url('assets/images/stakx.svg') }}"
+                     alt="stakx"
+                     class="c-stakx-logo"
+                >
             </div>
+
+            <nav class="c-navigation text-center mb-4">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="{{ url('/') }}">Home</a></li>
+                    <li class="list-inline-item"><a href="{{ url(pages.News) }}">News</a></li>
+                    {#<li><a href="#">Getting Started</a></li>#}
+                    <li class="list-inline-item"><a href="{{ url(collections.docs['index']) }}">Documentation</a></li>
+                    <li class="list-inline-item"><a href="https://github.com/stakx-io/stakx">Github</a></li>
+                </ul>
+            </nav>
         </div>
 
         {% block body %}{% endblock %}
 
-        <footer class="o-page-section">
+        <footer class="u-text--light-purple py-5">
             <div class="container">
-                <p class="text-center">Copyright &copy; {{ 'now' | date('Y') }}</p>
+                <p class="text-center m-0">Copyright &copy; {{ 'now' | date('Y') }}</p>
             </div>
         </footer>
 
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-        <script src="{{ url('assets/js/modernizr.js') }}"></script>
-        <script src="{{ url('assets/js/main.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     </body>
 </html>

@@ -37,7 +37,7 @@
             }
         }
     }
-    
+
     h1, h2, h3,
     h4, h5, h6 {
         & + table {
@@ -55,8 +55,6 @@
 }
 
 .c-docs__callout {
-    @extend .u-background;
-
     border-left-style: solid;
     border-left-width: 5px;
     margin-bottom: 15px;
@@ -104,17 +102,11 @@ $_headings: (
 
 @each $name, $settings in $_headings {
     .c-docs__callout--#{$name} {
-        @include background-blend-hack(map-get($settings, 'bg'));
+        background-image: image('fabric-' + map-get($settings, 'fabric') + '.jpg');
         border-left-color: map-get($settings, 'border');
 
         .c-docs__callout__heading:before {
             content: map-get($settings, 'fa');
-        }
-    }
-
-    .no-backgroundblendmode {
-        .c-docs__callout--#{$name} {
-            background-image: image('fabric-' + map-get($settings, 'fabric') + '.jpg');
         }
     }
 }

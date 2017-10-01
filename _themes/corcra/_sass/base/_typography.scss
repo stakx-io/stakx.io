@@ -1,12 +1,8 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3,
+h4, h5, h6 {
     margin-bottom: 15px;
 
-    @include respond-up(md) {
+    @include media-breakpoint-up(md) {
         font-weight: 200;
     }
 }
@@ -17,6 +13,10 @@ h1 {
 
 h2 {
     font-size: 32px;
+}
+
+p {
+    font-weight: 300;
 }
 
 pre code {

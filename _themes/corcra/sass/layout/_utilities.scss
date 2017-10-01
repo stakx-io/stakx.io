@@ -1,9 +1,0 @@
-@each $space in (margin, padding) {
-    @each $direction in (top, right, bottom, left) {
-        @each $value in (0, 5, 10, 15) {
-            .u-#{$space}-#{$direction}-#{$value} {
-                #{$space}-#{$direction}: #{$value};
-            }
-        }
-    }
-}

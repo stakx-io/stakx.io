@@ -8,7 +8,9 @@ permalink: /news/
 
 {% block content %}
     {% for post in collections.posts | order('date', 'DESC') %}
-        {{ news.news_article(post, true) }}
+        <div class="mb-5">
+            {{ news.news_article(post, true) }}
+        </div>
     {% endfor %}
 {% endblock %}
 

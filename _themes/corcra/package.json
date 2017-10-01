@@ -1,39 +1,36 @@
 {
   "dependencies": {
-    "bower": "^1.7.9",
-    "bower-installer": "^1.2.0",
-    "bower-shrinkwrap-resolver": "^0.4.1",
+    "@symfony/webpack-encore": "^0.15.1",
+    "bootstrap": "^4.0.0-beta",
     "gulp": "^3.9.1",
     "gulp-combine-mq": "^0.4.0",
     "gulp-cssmin": "^0.1.7",
-    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0",
-    "pump": "^1.0.1"
+    "postcss-remove-prefixes": "^1.2.0",
+    "postcss-unprefix": "^2.1.1",
+    "pump": "^1.0.1",
+    "sass-module-importer": "^1.4.0"
   },
   "devDependencies": {
     "connect-livereload": "^0.5.4",
     "express": "^4.14.0",
     "gulp-livereload": "^3.8.1",
     "gulp-sourcemaps": "^2.1.1",
-    "gulp-postcss": "^6.1.1",
     "postcss-reporter": "^1.4.1",
     "postcss-scss": "^0.2.0",
     "stylelint": "^7.1.0",
     "stylelint-scss": "^1.3.4",
     "tiny-lr": "^0.2.1"
   },
-  "name": "stakx-corcra-theme",
-  "version": "1.0.0",
-  "description": "A stakx theme created for stakx.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stakx-io/main-site.git"
+    "url": "git+https://github.com/stakx-io/stakx.io.git"
   },
   "author": "Vladimir \"allejo\" Jimenez",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/stakx-io/main-site/issues"
+    "url": "https://github.com/stakx-io/stakx.io/issues"
   },
   "homepage": "https://stakx.io"
 }

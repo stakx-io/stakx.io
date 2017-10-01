@@ -1,8 +1,6 @@
 theme:
-	npm install -g yarn; \
 	cd _themes/corcra; \
-	yarn install; \
-	node_modules/.bin/bower-installer; \
+	npm i --production; \
 	node_modules/.bin/gulp dist;
 
 site:

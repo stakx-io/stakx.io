@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+// Configuration and helpers
+@import
+    'abstracts/variables',
+    'abstracts/functions',
+    'abstracts/mixins';
+
+// We're building on Bootstrap
+@import 'bootstrap/scss/bootstrap.scss';
+
+// Typography
+@import
+    'base/typography';
+
+// Layout-related sections
+@import
+    'layout/page',
+    'layout/header',
+    'layout/aside';
+
+// Components
+@import
+    'components/code',
+    'components/terminal';
+
+// Page-specific styles
+@import
+    'pages/home',
+    'pages/docs';

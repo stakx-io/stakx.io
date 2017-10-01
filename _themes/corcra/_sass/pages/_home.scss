@@ -2,21 +2,15 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-.c-slogan {
-    color: #fff;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
 .c-slogan__heading {
     font-size: 30px;
     margin-bottom: 0.5em;
 
-    @include respond-down(md) {
+    @include media-breakpoint-down(md) {
         line-height: 1em;
     }
 
-    @include respond-up(sm) {
+    @include media-breakpoint-up(sm) {
         font-size: 45px;
         font-weight: 100;
         margin-bottom: 0;
@@ -26,16 +20,12 @@
 .c-slogan__subheading {
     font-size: 18px;
 
-    @include respond-up(sm) {
+    @include media-breakpoint-up(sm) {
         font-weight: 100;
     }
 }
 
 .c-twig-showcase {
-    h2 {
-        margin-top: 0;
-    }
-
     p {
         &:last-child {
             margin-bottom: 0;
@@ -46,12 +36,12 @@
 .c-twig-showcase__image {
     margin-bottom: 30px;
 
-    @include respond-up(md) {
+    @include media-breakpoint-up(md) {
         margin-bottom: 0;
     }
 
     img {
-        @include respond-down(md) {
+        @include media-breakpoint-down(md) {
             height: 175px;
         }
     }

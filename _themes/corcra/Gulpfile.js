@@ -19,7 +19,7 @@ gulp.task('dev:watch', function() {
     var tinylr = require('tiny-lr')();
     tinylr.listen(35729);
 
-    gulp.watch(['sass/**/*.scss'], ['sass:dev']);
+    gulp.watch(['_sass/**/*.scss'], ['sass:dev']);
     gulp.watch(['../../_site/**'], function (event) {
         var fileName = require('path').relative(__dirname, event.path);
 
@@ -36,43 +36,55 @@ gulp.task('dev:watch', function() {
 // Sass Functionality
 ///
 
+var sass = require('gulp-sass');
+var combineMq = require('gulp-combine-mq');
+var moduleImporter = require('sass-module-importer');
+
+var SASS_FILE = '_sass/main.scss';
+var SASS_DEST = 'assets/css';
+
 gulp.task('sass:dev', function (cb) {
-    var sass = require('gulp-sass');
-    var combineMq = require('gulp-combine-mq');
     var sourcemaps = require('gulp-sourcemaps');
 
     pump([
-        gulp.src('sass/main.scss'),
+        gulp.src(SASS_FILE),
         sourcemaps.init(),
         sass({
+            importer: moduleImporter(),
             outputStyle: 'expanded'
         }),
         combineMq({
             beautify: true
         }),
         sourcemaps.write('.'),
-        gulp.dest('assets/css')
+        gulp.dest(SASS_DEST)
     ], cb);
 });
 
 gulp.task('sass:dist', function (cb) {
-    var sass = require('gulp-sass');
     var cssmin = require('gulp-cssmin');
-    var combineMq = require('gulp-combine-mq');
+    var postcss = require('gulp-postcss');
+    var unprefix = require('postcss-unprefix');
+    var removePrefixes = require('postcss-remove-prefixes');
 
     pump([
-        gulp.src('sass/main.scss'),
+        gulp.src(SASS_FILE),
         sass({
+            importer: moduleImporter(),
             outputStyle: 'compressed'
         }),
         combineMq({
             beautify: false
         }),
+        postcss([
+            unprefix(),
+            removePrefixes()
+        ]),
         cssmin({
             processImport: false,
             mediaMerging: false
         }),
-        gulp.dest('assets/css')
+        gulp.dest(SASS_DEST)
     ], cb);
 });
 
@@ -91,8 +103,8 @@ gulp.task("sass:lint", function(cb) {
 
     pump([
         gulp.src([
-            'sass/**/*.scss',
-            '!sass/vendor/**/*.scss'
+            '_sass/**/*.scss',
+            '!_sass/vendor/**/*.scss'
         ]),
         postcss(processors, {
             syntax: syntax_scss
