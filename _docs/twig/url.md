@@ -1,5 +1,8 @@
 ---
 since: 0.1.1
+changelog:
+  - since: 0.1.2
+    note: The `absolute` argument was added
 summary: The `url` filter is used to generate URLs to stakx object or assets.
 parameters:
   -
