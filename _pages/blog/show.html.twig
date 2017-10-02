@@ -4,8 +4,13 @@ collection: posts
 ---
 
 {% extends '@theme/layouts/container.html.twig' %}
+
 {% import  '_includes/news-article.html.twig' as news %}
 
 {% block content %}
-    {{ news.news_article(this) }}
+    <div class="row">
+        <div class="col-lg-9 mx-auto">
+            {{ news.news_article(this) }}
+        </div>
+    </div>
 {% endblock %}

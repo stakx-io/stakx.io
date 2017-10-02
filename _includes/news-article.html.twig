@@ -1,7 +1,7 @@
 {% macro news_article(object, summary = false) %}
     {% import  '_includes/gh-avatar.html.twig' as gh %}
 
-    <article>
+    <article class="c-article">
         <header class="mb-3">
             <h2 class="mb-0">
                 <a href="{{ url(object) }}">{{ object.title }}</a>
@@ -16,12 +16,12 @@
             </small>
         </header>
 
-        <div class="c-article__body">
+        <section>
             {% if summary %}
                 {{ object.content | summary }}
             {% else %}
                 {{ object.content }}
             {% endif %}
-        </div>
+        </section>
     </article>
 {% endmacro %}
