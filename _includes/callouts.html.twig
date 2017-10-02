@@ -1,6 +1,6 @@
 {% macro _callout(class, heading, content) %}
 <div class="c-docs__callout c-docs__callout--{{ class }}">
-    <p class="c-docs__callout__heading"><strong>{{ heading }}</strong></p>
+    <p class="c-docs__callout__heading"><strong>{{ heading | markdown | replace({ '<p>': '', '</p>': '' }) }}</strong></p>
     {{ content | markdown }}
 </div>
 {% endmacro %}
