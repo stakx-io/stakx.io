@@ -1,5 +1,6 @@
 ---
 title: Welcome
+noToc: true
 ---
 
 stakx is a brand new static website generator inspired by the several out there and builds upon them to introduce a different and more organized way of doing things. This website serves to be a detailed guide on how build your website with stakx. If you're familiar with Jekyll, you'll find a lot of similarities with the functionality and concepts.
