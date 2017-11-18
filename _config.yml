@@ -6,6 +6,7 @@ exclude:
   - /.phar$/
   - Makefile
   - stakx/
+  - .idea/
 
 collections:
   - name: posts

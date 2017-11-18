@@ -96,25 +96,3 @@ In your Twig templates, you have access to the special `this.iterators` array th
   'Heads Up',
   'The "value expansion" feature is only available to the `permalink` Front Matter key; an error will be thrown if used for any other key.'
 ) }}
-
-## Permalinks
-
-The `permalink` key has special behavior when used in the Front Matter of a PageView. When this key is a string or an array of a single string, then that will behave as the permalink for that PageView. All generated URLs will be sanitized and converted to lowercase automatically, for example:
-
-```yaml
----
-permalink: /My Super Awesome First Page!/
-#          /my-super-awesome-first-page/
----
-```
-
-If the `permalink` key is set to an array of strings, then the first link will be the canonical link for that PageView but the rest of the permalinks will be created as redirects. In the following example, both the `/about-me/` and `/life-story/` URLs will redirect to `/about/`.
-
-```yaml
----
-permalink:
-    - /about/
-    - /about-me/
-    - /life-story/
----
-```

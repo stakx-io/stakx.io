@@ -6,5 +6,7 @@
       route: front-matter
     - name: PageViews
       route: pageviews
+    - name: Permalinks
+      route: permalinks
     - name: Twig
       route: twig
