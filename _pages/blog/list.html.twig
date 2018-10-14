@@ -3,21 +3,21 @@ title: News
 permalink: /news/
 ---
 
-{% extends '@theme/layouts/aside.html.twig' %}
-{% import  '_includes/news-article.html.twig' as news %}
+{% extends '@theme/_layouts/aside.html.twig' %}
+{% import '_includes/news-article.html.twig' as news %}
 
 {% block content %}
     {% for post in collections.posts | order('date', 'DESC') %}
-        <div class="mb-5">
-            {{ news.news_article(post, true) }}
+        <div class="{% if not loop.last %}mb-5{% endif %}">
+            {{ news.news_article(post, '2', true) }}
         </div>
     {% endfor %}
 {% endblock %}
 
 {% block aside %}
-    <h4>Categories</h4>
+    <h3>Categories</h3>
     <ul class="list-unstyled">
-        {% for category in data.categories %}
+        {% for category in site.categories %}
             <li>{{ category | title }}</li>
         {% endfor %}
     </ul>
