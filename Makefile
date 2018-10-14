@@ -1,8 +1,3 @@
-theme:
-	cd _themes/corcra; \
-	npm i --production; \
-	node_modules/.bin/gulp dist;
-
 site:
 	wget https://getcomposer.org/composer.phar; \
 	chmod +x composer.phar; \
@@ -13,4 +8,4 @@ site:
 	pwd; \
 	php stakx/bin/stakx build
 
-build: theme site
+build: site
