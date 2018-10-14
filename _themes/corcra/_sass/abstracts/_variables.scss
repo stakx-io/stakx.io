@@ -31,3 +31,14 @@ $base-url: '../' !default;
 
 /// The steps font size modifiers will take
 $font-sizes: 1em, 1.5em, 2em, 2.25em;
+
+/// The steps used for spacing
+$spacing-steps: 0, 0.25rem, 0.5rem, 1rem, 1.5rem, 3rem;
+
+/// The directions used across CSS for positioning
+$directions: (
+    t: top,
+    r: right,
+    b: bottom,
+    l: left,
+);

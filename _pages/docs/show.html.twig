@@ -3,25 +3,35 @@ permalink: /docs/%title/
 collection: docs
 ---
 
-{% extends '_layouts/docs.html.twig' %}
+{% extends '@theme/_layouts/base.html.twig' %}
 
-{% block content %}
-    <article>
-        <header>
-            <h1>{{ this.title }}</h1>
-        </header>
-        <section>
-            {% if this.noToc == false %}
-                <div class="c-toc mb-3 p-4 u-background--lpurple">
-                    <p class="mb-3 text-center"><strong>On This Page</strong></p>
-
-                    {{ this.content | toc(class="mb-0 pl-3") }}
-                </div>
-            {% endif %}
-
-            <div>
-                {{ this.content }}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-xl-2">
+                {% include "_includes/side-nav.html.twig" %}
             </div>
-        </section>
-    </article>
+            <div class="col">
+                <article class="c-docs__body">
+                    <header>
+                        <h1>{{ this.title }}</h1>
+                    </header>
+
+                    <section>
+                        {{ this.content }}
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-3 col-xl-2 position-relative">
+                {% if this.noToc == false %}
+                    <div class="position-sticky pin-t-3 p-3 u-background--lpurple">
+                        <p class="mb-3 text-center"><strong>On This Page</strong></p>
+
+                        {{ this.content | toc(class="c-toc") }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

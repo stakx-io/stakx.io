@@ -1,3 +1,16 @@
 .c-toc {
-    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    & > li {
+        list-style: none;
+    }
+
+    ul {
+        padding-left: 30px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
 }
