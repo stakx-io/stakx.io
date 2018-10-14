@@ -1,10 +1,19 @@
+body {
+    color: $palette-white;
+}
+
+a {
+    color: $palette-yellow;
+
+    &:hover {
+        color: $palette-yellow;
+    }
+}
+
 h1, h2, h3,
 h4, h5, h6 {
+    line-height: 1;
     margin-bottom: 15px;
-
-    @include media-breakpoint-up(md) {
-        font-weight: 200;
-    }
 }
 
 h1 {
@@ -29,4 +38,10 @@ pre code {
 
 .u-text--light-purple {
     color: $palette-light-purple;
+}
+
+@for $index from 1 through length($font-sizes) {
+    .text-#{$index} {
+        font-size: nth($font-sizes, $index);
+    }
 }

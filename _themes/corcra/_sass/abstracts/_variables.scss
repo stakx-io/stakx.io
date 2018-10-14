@@ -2,10 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-// Path to directory with Lato font files
-$lato-font-path: '../vendor/lato/fonts';
-
-
 /// Color Palette
 
 $palette-light-purple: #d6bede;
@@ -33,12 +29,5 @@ $dark-grey: rgb(68, 68, 68) !default;
 $base-url: '../' !default;
 
 
-///
-/// Bootstrap Overrides
-///
-
-$link-color: $palette-yellow;
-$body-color: $palette-white;
-
-$font-family-sans-serif: 'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$font-family-monospace: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+/// The steps font size modifiers will take
+$font-sizes: 1em, 1.5em, 2em, 2.25em;

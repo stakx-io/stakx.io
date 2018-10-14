@@ -1,8 +1,3 @@
 .c-toc {
     display: inline-block;
-
-    @include media-breakpoint-up(md) {
-        float: left;
-        margin-right: 1rem;
-    }
 }
