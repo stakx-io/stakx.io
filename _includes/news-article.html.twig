@@ -1,19 +1,21 @@
-{% macro news_article(object, summary = false) %}
+{% macro news_article(object, level, summary = false) %}
     {% import  '_includes/gh-avatar.html.twig' as gh %}
 
     <article class="c-article">
         <header class="mb-3">
-            <h2 class="mb-0">
+            <h{{ level | default('2') }} class="mb-1">
                 <a href="{{ url(object) }}">{{ object.title }}</a>
-            </h2>
-            <small>
+            </h{{ level | default('2') }}>
+            <p class="mb-0">
                 <span>{{ object.date | date('F d, Y') }}</span>
                 &bull;
-                <a href="https://github.com/{{ object.author }}">
-                    {{ gh.gh_avatar(object.author, 24) }}
-                    {{ object.author }}
-                </a>
-            </small>
+                <strong>
+                    <a href="https://github.com/{{ object.author }}">
+                        {{ gh.gh_avatar(object.author, 24) }}
+                        {{- object.author -}}
+                    </a>
+                </strong>
+            </p>
         </header>
 
         <section>
@@ -23,5 +25,14 @@
                 {{ object.content }}
             {% endif %}
         </section>
+
+        <footer>
+            <p class="mb-0">
+                <i class="fa fa-folder" aria-hidden="true"></i>
+                <span class="ml-1">
+                    {{ object.category | title }}
+                </span>
+            </p>
+        </footer>
     </article>
 {% endmacro %}

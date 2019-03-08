@@ -1,0 +1,7 @@
+@for $index from 1 through length($spacing-steps) {
+    @each $abbv, $pos in $directions {
+        .pin-#{$abbv}-#{$index - 1} {
+            #{$pos}: nth($spacing-steps, $index);
+        }
+    }
+}

@@ -1,12 +1,6 @@
 exclude:
-  - README.md
-  - feed.xml
-  - /.html$/
-  - yarn.lock
-  - /.phar$/
   - Makefile
-  - stakx/
-  - .idea/
+  - README.md
 
 collections:
   - name: posts
@@ -26,3 +20,7 @@ theme: corcra
 debug: true
 
 title: stakx - Yet Another Static Website Generator
+categories:
+    - announcements
+    - releases
+    - tutorials

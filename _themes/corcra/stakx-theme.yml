@@ -1,6 +1,4 @@
-exclude:
-    - sass/
-    - layouts/
-    - bower_components/
-    - Gulpfile.js
-    - /.json$/
+name: Corcra
+author: stakx Team
+description: The theme used for the main stakx website
+exclude: []

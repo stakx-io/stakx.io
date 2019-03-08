@@ -1,8 +1,16 @@
 .c-toc {
-    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 0;
 
-    @include media-breakpoint-up(md) {
-        float: left;
-        margin-right: 1rem;
+    & > li {
+        list-style: none;
+    }
+
+    ul {
+        padding-left: 30px;
+    }
+
+    li {
+        margin-bottom: 5px;
     }
 }
