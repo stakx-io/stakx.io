@@ -9,7 +9,7 @@ stakx is a brand new static website generator inspired by the several out there 
 
 ## Why use PHP?
 
-stakx was written in PHP for a number of reasons. There is an extremely powerful templating engine written in PHP called [Twig](http://twig.sensiolabs.org/), which far surpasses Liquid for those coming from a Jekyll background. For developers accustomed to LAMP environments, stakx will be able to run without having to bother ensuring your host is using the correct version of Ruby.
+stakx was written in PHP for a number of reasons. There is an extremely powerful templating engine written in PHP called [Twig](https://twig.symfony.com/), which far surpasses Liquid for those coming from a Jekyll background. For developers accustomed to LAMP environments, stakx will be able to run without having to bother ensuring your host is using the correct version of Ruby.
 
 ## So, why stakx?
 
