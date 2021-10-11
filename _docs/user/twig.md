@@ -5,7 +5,7 @@ category: documentation
 
 {% import '_includes/callouts.html.twig' as callouts %}
 
-stakx uses the [Twig template engine](https://twig.sensiolabs.org) for all of its PageViews as well as ContentItems. If you're coming from templating languages such as Liquid, you'll feel right at home and wonder *why* Liquid doesn't have such awesome features.
+stakx uses the [Twig template engine](https://twig.symfony.com/) for all of its PageViews as well as ContentItems. If you're coming from templating languages such as Liquid, you'll feel right at home and wonder *why* Liquid doesn't have such awesome features.
 
 Due to stakx's lack of an API, support for adding another template engine is not possible at the moment. Support for new template engines will become available through the use of plug-ins.
 
@@ -31,7 +31,7 @@ In order to access information regarding your site, here are some predefined var
 
 ## Custom Twig Filters
 
-stakx supports all [built-in Twig functions and filters](https://twig.sensiolabs.org/doc/1.x/) and in addition, some custom functions and filters are provided by stakx for convenience and to introduce new features.
+stakx supports all [built-in Twig functions and filters](https://twig.symfony.com/doc/1.x/) and in addition, some custom functions and filters are provided by stakx for convenience and to introduce new features.
 
 {% for f in collections['twig-filters'] | order('basename') %}
 - [{{ f.basename }}]({{ url(f) }})
